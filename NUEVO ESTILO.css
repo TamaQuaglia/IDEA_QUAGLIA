@@ -1,14 +1,14 @@
 *{margin: 0.5; padding: 0; box-sizing: 0; }
 
 nav
-{display: flex;
-flex-direction: row;
-justify-content: space-between;
-margin: 2%;
-} 
+        {display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 2%;
+        } 
 .menu{  list-style-type:none;
         font-style: italic;
-        color: white;}
+        }
 
 .menu li { display: inline-block;
             text-align: center;
@@ -45,7 +45,8 @@ p{ color: black;}
                             "sponsor sponsor sponsor sponsor"
                             "footer footer footer footer";
         grid-row-gap: 10px;
-        grid-column-gap:10px; }
+        grid-column-gap:10px; 
+        background: linear-gradient(to top, white, #E78D1E);}
         
 section#ban{grid-area: ban;}
 section#hockey{ grid-area: hockey;
@@ -57,7 +58,11 @@ h2{ font-size: 35px;
     background-color: #18254F;
     padding: 1rem;
     align-self: center;
-    color: white;}        
+    color: white;}
+h2:hover{
+        transform: scale(1.1 , 1.1);
+       }    
+
 section#Rugby{
             grid-area:rugby;
             background-color: #E78D1E;
@@ -73,7 +78,7 @@ section#sponsor{grid-area: sponsor;
     width: 100%;}         
 
 footer{grid-area: footer;
-         background:white;
+         background:linear-gradient(to top, #e78d, white);
         text-align: center;}   
 #sponsor div{
         display: flex;
@@ -151,5 +156,8 @@ div img {
                 "categorias"
                 "galeria"
                 "galeria"
-                "pie";
-            }
+                 "pie";}
+
+.main   {
+        background: linear-gradient(to top, #18254F white);
+        }
