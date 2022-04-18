@@ -1,0 +1,155 @@
+*{margin: 0.5; padding: 0; box-sizing: 0; }
+
+nav
+{display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin: 2%;
+} 
+.menu{  list-style-type:none;
+        font-style: italic;
+        color: white;}
+
+.menu li { display: inline-block;
+            text-align: center;
+            position: relative;
+            padding: 15px;}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+    color:#18254F;
+    font-size: 1.5rem}
+
+a:hover{color: #E78D1E;
+        text-decoration: overline;}  
+
+ul ul{ position: absolute;
+        display: none;
+        border: #E78D1E;}
+
+ul ul li{display: block;}
+
+ ul li:hover ul{display:block;  
+            background-color: #18254F;}    
+.listas{margin: 25px;
+        list-style-type:square;
+        color: black;}
+
+p{ color: black;}                
+               
+.main   {display: grid;
+        grid-template-columns:repeat (4, 1fr);
+        grid-template-rows:repeat (4, 1fr); 
+        grid-template-areas:"ban ban ban ban" 
+                            "hockey hockey rugby rugby" 
+                            "sponsor sponsor sponsor sponsor"
+                            "footer footer footer footer";
+        grid-row-gap: 10px;
+        grid-column-gap:10px; }
+        
+section#ban{grid-area: ban;}
+section#hockey{ grid-area: hockey;
+        background-color: #E78D1E;
+        text-align: center;
+        }
+h2{ font-size: 35px;
+    text-align: center;
+    background-color: #18254F;
+    padding: 1rem;
+    align-self: center;
+    color: white;}        
+section#Rugby{
+            grid-area:rugby;
+            background-color: #E78D1E;
+            text-align: center;}
+section#sponsor{grid-area: sponsor;
+                background: #18254F;}
+#sponsor {
+         display: flex;
+         margin-left: 0rem;
+         padding: 1rem;
+         flex-direction: column;}
+#sponsor h2{
+    width: 100%;}         
+
+footer{grid-area: footer;
+         background:white;
+        text-align: center;}   
+#sponsor div{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        background-color: #18254F;
+        justify-content: center;
+        padding: 1%;}
+div img {
+    width: 175px;
+    height: 175px;}
+
+
+/*hockey CSS*/
+.hock{  display: grid;
+        grid-template-columns:repeat (2, 1fr);
+        grid-template-rows:repeat (4, 1fr); 
+        grid-template-areas:"resumen resumen" 
+                            "fixture categorias" 
+                            "galeria galeria"
+                            "pie pie";
+        grid-row-gap:10px;
+        grid-column-gap:10px;}
+
+
+
+#pie {grid-area: pie;}
+#resumen {grid-area: resumen;}   
+#fixture {grid-area: fixture;
+            background: #E78D1E;}
+#categorias{grid-area: categorias;
+            text-align: center;
+            background: #E78D1E;}   
+#galeria{ grid-area: galeria;
+          background-color: #18254F;} 
+
+#galeria img {
+    width: 225px;
+    height: 200px;
+    opacity: 0.4;
+    border: white;
+    margin-left: 1.5rem;
+    text-align: center;}
+
+#galeria img:hover {
+    opacity: 1;
+    border:solid 1px white}  
+
+@media screen and (max-width: 640px){
+    .main { 
+            background-color: aqua;
+            grid-template-columns:repeat (1fr);
+            grid-template-rows:repeat (5, 1fr); 
+            grid-template-areas:
+                "ban" 
+                "hockey " 
+                "rugby "
+                "sponsor"
+                "footer "
+        }  
+    #hockey{ grid-area: hockey;
+             text-align: center;
+            }
+    }
+
+@media screen and (max-width: 640px){
+        .hock { 
+                background-color: aqua;
+                grid-template-columns:repeat (1fr);
+                grid-template-rows:repeat (7, 1fr); 
+                grid-template-areas:
+                "resumen "
+                "resumen"
+                "fixture" 
+                "categorias"
+                "galeria"
+                "galeria"
+                "pie";
+            }
